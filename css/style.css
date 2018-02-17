@@ -38,7 +38,7 @@ body {
 }
 
 .contenedor-canciones {
-    height: 80vh;
+    height: 65vh;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -83,9 +83,11 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: 15px;
-    font-size: 1.5em;
+    font-size: 1em;
     cursor: pointer;
     transition: transform 0.5s ease;
+    overflow-y:  hidden;
+    padding: 5px;
 }
 
 .footer {
@@ -180,4 +182,37 @@ body {
     margin-top: 20px;
     max-width: 70%;
     max-height: 580px;
+}
+@media screen and (max-width: 550px) {
+    body{
+        overflow-y: scroll;
+    }
+    .body-left {
+        height: 85vh;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+    .body-right {
+        width: 100%;
+    }
+    .botones {
+        width: 60%;
+        height: 10%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer {
+        border: solid black 1px;
+        height: 12vh;
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
 }
