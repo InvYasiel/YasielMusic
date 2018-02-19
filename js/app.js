@@ -46,7 +46,21 @@ var mediaJson = [{
         path: 'videotutorial',
         type: 'video',
         caratula: 'videotutorial.mp4'
-    },
+    },//Maluma  Corazon .mp3
+    {
+        id: 7,
+        title: 'Maluma  Corazon ',
+        path: 'Maluma  Corazon ',
+        type: 'music',
+        caratula: 'maluma.jpg'
+    },//BERET NUNCA
+    {
+        id: 8,
+        title: 'BERET NUNCA',
+        path: 'BERET NUNCA',
+        type: 'music',
+        caratula: 'beret.jpg'
+    },//BERET NUNCA
 
 ]
 
