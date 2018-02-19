@@ -89,6 +89,7 @@ function loadPlayList() {
         cancion.addEventListener('click', () => {
             mostrarReproduccionActual(mediaJson[i].id);
             reproducirMedia(mediaJson[i].id);
+            window.scrollTo(0, 0);
             rep.play();
             rangeValume.style = 'display:block;'
             volmin.style = 'diplay:block;  margin-top:140px;'
