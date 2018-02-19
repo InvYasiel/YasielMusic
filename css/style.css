@@ -9,19 +9,12 @@ body {
     width: 100%;
     height: 100%;
     overflow-y: hidden;
-    /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#fcfff4+22,dfe5d7+42,b3bead+78 */
-    background: #fcfff4;
-    /* Old browsers */
-    background: -moz-linear-gradient(top, #fcfff4 22%, #dfe5d7 42%, #b3bead 78%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #fcfff4 22%, #dfe5d7 42%, #b3bead 78%);
-    /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #fcfff4 22%, #dfe5d7 42%, #b3bead 78%);
-    /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcfff4', endColorstr='#b3bead', GradientType=0);
-    /* IE6-9 */
-}
-
+    background: rgba(169,3,41,1);
+    background: -moz-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(169,3,41,1) 17%, rgba(169,3,41,1) 30%, rgba(143,2,34,1) 60%, rgba(109,0,25,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(169,3,41,1)), color-stop(17%, rgba(169,3,41,1)), color-stop(30%, rgba(169,3,41,1)), color-stop(60%, rgba(143,2,34,1)), color-stop(100%, rgba(109,0,25,1)));
+    background: -webkit-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(169,3,41,1) 17%, rgba(169,3,41,1) 30%, rgba(143,2,34,1) 60%, rgba(109,0,25,1) 100%);
+    background: -o-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(169,3,41,1) 17%, rgba(169,3,41,1) 30%, rgba(143,2,34,1) 60%, rgba(109,0,25,1) 100%);
+    background: -ms-linear-gradient(left, rgba(169,3,41,1) 0%, rgba(169,3,41,1) 17%, rgba(169,3,41,1) 30%, rgba(143,2,34,1) 60%, rgba(109,0,25,1) 100%);}
 .contenedor {
     border: solid black 1px;
     width: 100%;
@@ -43,7 +36,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    border-left: 1px black solid;
+    border-left: 1px white solid;
     overflow-y: scroll;
 
     
@@ -71,6 +64,7 @@ body {
 }
 
 .botones {
+    border-top:solid white 1px;
     width: 80%;
     height: 10%;
     display: flex;
@@ -97,7 +91,8 @@ body {
 }
 
 .footer {
-    border: solid black 1px;
+    border-top: solid white 1px;
+    color: white;
     height: 5vh;
     width: 100%;
     display: flex;
@@ -128,16 +123,16 @@ body {
 .icon-menos:hover,
 .icon-mas:hover,
 .cancion:hover {
-    color: red;
+    color: white;
     transform: scale(1.1);
     
 }
 
-.icon-rep-volume {
+.icon-rep-volume, #volmin, #volnone {
     margin-left: 8%;
     margin-right: 2%;
     font-size: 2em;
-    color: rgb(30, 41, 104);
+    color: white;
 }
 
 .header {
@@ -160,23 +155,26 @@ body {
 .header-titulo {
     font-size: 1.4em;
     margin: 15px;
+    color: white;
     text-transform: uppercase;
 }
 
 .limon {
     font-size: 2em;
     margin-left: 2%;
-    color: red;
+    color: white;
 }
 
 .tituloLista {
+    color:white;
     font-size: 2em;
-    margin-top: 5px;
+    margin-top: 20px
+     
 }
 
 .isPlaying {
     display: initial;
-    color: red;
+    color: white;
     margin-left: 10px;
     font-size: 1em;
 }
@@ -214,6 +212,7 @@ body {
     }
     .footer {
         border: solid black 1px;
+        color:white;
         height: 12vh;
         width: 100%;
         display: flex;
@@ -222,3 +221,18 @@ body {
         align-items: center;
     }
 }
+.slider-wrapper {
+    display: inline-block;
+    width: 20px;
+    height: 150px;
+    padding: 0;
+    margin-left: 40px;
+  }
+  .slider-wrapper input {
+    width: 150px;
+    height: 20px;
+    margin: 0;
+    transform-origin: 75px 75px;
+    transform: rotate(-90deg);
+  }
+  

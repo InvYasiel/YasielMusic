@@ -76,7 +76,8 @@ function loadPlayList() {
             mostrarReproduccionActual(mediaJson[i].id);
             reproducirMedia(mediaJson[i].id);
             rep.play();
-
+            rangeValume.style = 'display:block;'
+            volmin.style = 'diplay:block;  margin-top:140px;'
             // Reproducir
         }, false)
 
@@ -139,7 +140,7 @@ function anterior() {
     } else {
         mostrarReproduccionActual(currentId - 1);
         reproducirMedia(currentId - 1);
-    }
+    }   
 
     rep.play();
 }
@@ -153,9 +154,10 @@ function play() {
     if(rep.getAttribute('src')==null){
         reproducirMedia(0);
         mostrarReproduccionActual(0)
-    }
+    }   
     rep.play();
-    
+    rangeValume.style = 'display:block;'
+    volmin.style = 'diplay:block;  margin-top:140px;'
 }
 
 function pause() {
@@ -181,16 +183,53 @@ function siguiente() {
     rep.play();
 
 }
+rep.addEventListener('ended', function(){
+    var currentId = parseInt(rep.getAttribute("data-media"));
 
-function volmas() {
-    if (rep.volume < 1.0) {
-        rep.volume += 0.1
+    if (currentId + 1 >= mediaJson.length) {
+        mostrarReproduccionActual(0);
+        reproducirMedia(0);
+    } else {
+
+        mostrarReproduccionActual(currentId + 1);
+        reproducirMedia(currentId + 1);
     }
-}
+    rep.load();
+    rep.play();
+}, false)
+// function volmas() {
+//     if (rep.volume < 1.0) {
+//         rep.volume += 0.1
+//     }
+// }
 
-function volmenos() {
-    if (rep.volume >= 0.1) {
-        rep.volume -= 0.1
-    }
+// function volmenos() {
+//     if (rep.volume >= 0.1) {
+//         rep.volume -= 0.1
+//     }
 
+// }
+rep.volume = 0.5;
+volmin.style = 'display:none';
+rangeValume = document.getElementById('rangeValume');
+rangeValume.style = 'display:none'
+rangeValume.addEventListener('change', function(){
+    
+rep.volume = rangeValume.value / 100;
+var volmax = document.getElementById('volmax');
+var volmin = document.getElementById('volmin');
+var volnone = document.getElementById('volnone');
+if(rep.volume > 0.7){
+    volmax.style = 'display:block; margin-top:140px;';
+    volmin.style = 'display:none';
+volnone.style = 'display:none';
+}else if(rep.volume < 0.3){
+    volmin.style = 'display:block; margin-top:140px;';
+    volmax.style = 'display:none'
+volnone.style = 'display:none'
+}else{
+    volnone.style = 'display:block; margin-top:140px;';
+    volmax.style = 'display:none';
+volmin.style = 'display:none';
 }
+}, false)
