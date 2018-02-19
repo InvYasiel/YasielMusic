@@ -39,7 +39,15 @@ var mediaJson = [{
         path: 'video',
         type: 'video',
         caratula: 'video.mp4'
-    }
+    },
+    {
+        id: 6,
+        title: 'Video Tutorial',
+        path: 'videotutorial',
+        type: 'video',
+        caratula: 'videotutorial.mp4'
+    },
+
 ]
 
 var videoArray = []
@@ -108,7 +116,10 @@ function reproducirMedia(i) {
     });
 
     if (type == 'video') {
-        rep.setAttribute('src', 'resources/video/' + path + '.mp4');
+
+            rep.setAttribute('src', 'resources/video/' + path + '.mp4');
+        
+        
     } else {
         rep.setAttribute('src', 'resources/music/' + path + '.mp3');
         rep.setAttribute('poster', 'resources/img/' + caratula);
@@ -139,8 +150,12 @@ function retroceder() {
 }
 
 function play() {
-
+    if(rep.getAttribute('src')==null){
+        reproducirMedia(0);
+        mostrarReproduccionActual(0)
+    }
     rep.play();
+    
 }
 
 function pause() {
