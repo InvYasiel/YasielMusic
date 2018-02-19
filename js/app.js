@@ -223,7 +223,7 @@ if(rep.volume > 0.7){
     volmax.style = 'display:block; margin-top:140px;';
     volmin.style = 'display:none';
 volnone.style = 'display:none';
-}else if(rep.volume < 0.3){
+}else if(rep.volume < 0.2){
     volmin.style = 'display:block; margin-top:140px;';
     volmax.style = 'display:none'
 volnone.style = 'display:none'
