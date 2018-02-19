@@ -154,6 +154,7 @@ body {
 
 .header-titulo {
     font-size: 1.4em;
+    
     margin: 15px;
     color: white;
     text-transform: uppercase;
@@ -166,6 +167,7 @@ body {
 }
 
 .tituloLista {
+    text-decoration: underline WHITE;
     color:white;
     font-size: 2em;
     margin-top: 20px
@@ -200,9 +202,12 @@ body {
         
     }
     .body-right {
+        border-bottom:white 1px solid;
         width: 100%;
     }
-
+    .contenedor-canciones{
+        border-top:solid white 1px;
+    }
     .footer {
         border: solid black 1px;
         color:white;
