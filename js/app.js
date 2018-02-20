@@ -7,10 +7,11 @@ var mediaJson = [{
     },
     {
         id: 1,
-        title: 'Besos En Guerra',
-        path: 'Besos-En-Guerra',
-        type: 'music',
-        caratula: 'Moratb.jpg'
+        title: 'Video Tutorial',
+        path: 'ss460',
+        type: 'video',
+        caratula: 'ss460.mp4',
+        subtitulo: 'subVid.vtt'
     },
     {
         id: 2,
@@ -21,10 +22,10 @@ var mediaJson = [{
     },
     {
         id: 3,
-        title: 'Gente De Zona  Bailame',
-        path: 'Gente-de-Zona-Bailame',
-        type: 'music',
-        caratula: 'Frontal.jpg'
+        title: 'Video Risas',
+        path: 'video',
+        type: 'video',
+        caratula: 'video.mp4'
     },
     {
         id: 4,
@@ -32,36 +33,26 @@ var mediaJson = [{
         path: 'Morat-Yo-Contigo-Tu-Conmigo',
         type: 'music',
         caratula: 'Morat.jpg'
-    },
-    {
+    },{
         id: 5,
-        title: 'Video Risas',
-        path: 'video',
-        type: 'video',
-        caratula: 'video.mp4'
-    },
-    {
+        title: 'Gente De Zona  Bailame',
+        path: 'Gente-de-Zona-Bailame',
+        type: 'music',
+        caratula: 'Frontal.jpg'
+    },{
         id: 6,
-        title: 'Video Tutorial',
-        path: 'ss460',
-        type: 'video',
-        caratula: 'ss460.mp4',
-        subtitulo: 'subVid.vtt'
-    },//Maluma  Corazon .mp3
+        title: 'Besos En Guerra',
+        path: 'Besos-En-Guerra',
+        type: 'music',
+        caratula: 'Moratb.jpg'
+    },
     {
         id: 7,
-        title: 'Maluma  Corazon ',
-        path: 'Maluma  Corazon ',
-        type: 'music',
-        caratula: 'maluma.jpg'
-    },//BERET NUNCA
-    {
-        id: 8,
         title: 'BERET NUNCA',
         path: 'BERET NUNCA',
         type: 'music',
         caratula: 'beret.jpg'
-    },//BERET NUNCA
+    },
 
 ]
 
@@ -262,3 +253,4 @@ volnone.style = 'display:none'
 volmin.style = 'display:none';
 }
 }, false)
+
