@@ -1,0 +1,29 @@
+﻿WEBVTT
+
+00:00:00.000 --> 00:00:09.460
+Muy buenas en este video tutorial le añadiremos a nuestro reproductor un inicio automático
+
+
+00:00:09.480 --> 00:00:16.280
+Como se puede comprobar ahora mismo al darle al playno reproduce nada, nadamás iniciar nuestro reproductor
+
+
+00:00:16.280 --> 00:00:28.280
+Para ello en nuestra funcion de play vamos a añadirle una condición, la condición recibirá el atributo del reproductor
+
+
+00:00:28.280 --> 00:00:50.280
+rep.getAttribute('src') == null y es nulo le añadiremos lo que va a reproducir, vamos a la función de reproducir
+
+
+00:00:50.280 --> 00:01:01.280
+se la añadiremos psandole el 0 que si tenemos en una lista será el primer video o canción y también añadimos la
+
+
+00:01:01.280 --> 00:01:13.280
+Reproducción actual pasandole 0 tambien, con la cual aquí tenemos que reproduzca directamente la canción
+
+
+00:01:13.280 --> 00:01:30.280
+y yo creo que eso es todo, ahora haremos la comprobación, actualizamos la página y le damos al play
+
