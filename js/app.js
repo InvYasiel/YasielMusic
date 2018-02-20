@@ -43,9 +43,10 @@ var mediaJson = [{
     {
         id: 6,
         title: 'Video Tutorial',
-        path: 'videotutorial',
+        path: 'ss460',
         type: 'video',
-        caratula: 'videotutorial.mp4'
+        caratula: 'ss460.mp4',
+        subtitulo: 'subVid.vtt'
     },//Maluma  Corazon .mp3
     {
         id: 7,
@@ -117,7 +118,7 @@ function mostrarReproduccionActual(i) {
 }
 // Agregar la etiqueta video/media/audio al HTML
 var rep = document.getElementById('reproducir');
-
+var trak = document.createElement('track');
 function reproducirMedia(i) {
 
     path = '';
@@ -130,15 +131,28 @@ function reproducirMedia(i) {
             type = element.type;
         }
     });
-
-    if (type == 'video') {
-
+    if (path == 'ss460'){
+        
+        
+        trak.setAttribute('label','Spanish subtitles');
+        trak.setAttribute('kind','subtitles');
+        trak.setAttribute('srclang','es');
+        trak.setAttribute('src','resources/video/subVid.vtt');
+        trak.setAttribute('default','');
+        rep.appendChild(trak);
+        rep.setAttribute('src', 'resources/video/' + path + '.mp4');
+        
+    }
+    else if (type == 'video' && path != 'ss460') {
+        trak.setAttribute('src','');
+        
             rep.setAttribute('src', 'resources/video/' + path + '.mp4');
-        
-        
+            
     } else {
+        trak.setAttribute('src','');
         rep.setAttribute('src', 'resources/music/' + path + '.mp3');
         rep.setAttribute('poster', 'resources/img/' + caratula);
+        
     }
 
     rep.setAttribute('data-media', i);
